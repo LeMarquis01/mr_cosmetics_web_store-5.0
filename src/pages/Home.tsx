@@ -13,7 +13,7 @@ export default function Home() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const categories = [
-    { name: 'Skincare', img: 'https://images.unsplash.com/photo-1556228720-da3e3020668b?auto=format&fit=crop&q=80&w=800', icon: <Leaf size={20} /> },
+    { name: 'Skincare', img: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&q=80&w=800', icon: <Leaf size={20} /> },
     { name: 'Haircare', img: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800', icon: <Sparkles size={20} /> },
     { name: 'Body', img: 'https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&q=80&w=800', icon: <ShieldCheck size={20} /> },
   ];

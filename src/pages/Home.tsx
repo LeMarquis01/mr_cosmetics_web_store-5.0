@@ -4,8 +4,6 @@ import { ArrowRight, Leaf, Sparkles, Award, ShieldCheck, Mail, AlertCircle, Chec
 import { Link } from 'react-router-dom';
 
 import { cn } from '../lib/utils';
-import { PRODUCTS } from '../data/products';
-import ProductCard from '../components/ProductCard';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -17,8 +15,6 @@ export default function Home() {
     { name: 'Haircare', img: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800', icon: <Sparkles size={20} /> },
     { name: 'Body', img: 'https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&q=80&w=800', icon: <ShieldCheck size={20} /> },
   ];
-
-  const featuredProducts = PRODUCTS.slice(0, 8);
 
   return (
     <div className="flex flex-col">
@@ -118,32 +114,6 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        </div>
-      </section>
-
-      {/* Featured Treasures */}
-      <section className="py-32 marble-bg/20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20 space-y-4">
-            <p className="text-brand-gold uppercase text-[10px] font-bold tracking-[0.4em]">Selection</p>
-            <h2 className="text-4xl md:text-6xl serif text-brand-forest font-light">Featured <span className="italic">Treasures</span></h2>
-            <div className="w-24 h-[1px] bg-brand-gold/30 mx-auto mt-8" />
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-            {featuredProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
-
-          <div className="mt-20 text-center">
-            <Link to="/shop" className="group inline-flex items-center space-x-3 text-brand-forest hover:text-brand-gold transition-colors">
-              <span className="text-xs font-bold uppercase tracking-widest">View Entire Vault</span>
-              <div className="w-10 h-10 rounded-full border border-brand-forest/10 flex items-center justify-center group-hover:border-brand-gold transition-colors">
-                <ArrowRight size={14} />
-              </div>
-            </Link>
-          </div>
         </div>
       </section>
     </div>
